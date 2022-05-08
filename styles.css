@@ -1,0 +1,126 @@
+body, html
+{
+    font-family: 'Times New Roman', Times, serif;
+    min-width: 1218px;
+}
+
+.overlay 
+{ 
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.2s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.overlay a 
+{
+    padding: 20px;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 32px;
+    color: #ffffff;
+    border-radius: 33px;
+    display: block;
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.mopedOptions, .carOptions
+{
+    display: none;
+    width: 100%;
+}
+
+#carColumn1, #carColumn2, #mopedRow, .overlay-content
+{
+    display: flex;
+    justify-content: center;
+    width: 0%;
+    -webkit-animation: slide 0.2s linear forwards;
+    animation: slide 0.2s linear forwards;
+}
+
+.button
+{
+    text-align: center;
+    background-color: #E14730;
+    width: 25%;
+}
+
+.button:hover, .button:focus
+{
+    background-color: #c0321c;
+}
+
+#closeBtn 
+{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 70px;
+}
+
+#closeBtn:hover, #closeBtn:focus
+{
+    color: #747474;
+}
+
+#returnBtn
+{
+    display: none;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+#returnBtn:hover, #returnBtn:focus
+{
+    background-color: #ffffff1c;
+}
+
+#openBtn
+{
+    color: #ffffff;
+    background-color: #E14730;
+    border: none;
+    border-radius: 33px;
+    padding: 15px 60px;
+}
+
+strong
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+@-webkit-keyframes slide
+{
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+@keyframes slide
+{
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+@media screen and (max-height: 450px), screen and (max-width: 900px) 
+{
+    .overlay a {font-size: 25px}
+    .overlay #closeBtn 
+    {
+      font-size: 55px;
+    }
+}
+
