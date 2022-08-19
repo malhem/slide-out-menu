@@ -1,2 +1,2 @@
 # slide-out-menu
-An easily customizeable template for a clean, transparent slide-out menu
+An easily customizeable template for a transparent slide-out menu
